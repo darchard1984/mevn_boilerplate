@@ -1,25 +1,27 @@
 version: '3'
 services:
-  nginx:
-    container_name: wetfoodshop_nginx
-    image: wetfoodshop/nginx
-    build: ./nginx
-    ports:
-      - "8002:80"
-    volumes:
-      - ./app/build/:/usr/share/nginx/html
+  # nginx:
+  #   container_name: wetfoodshop_nginx
+  #   image: wetfoodshop/nginx
+  #   build: ./nginx
+  #   ports:
+  #     - "8002:80"
+  #   volumes:
+  #     - ./app/build/:/usr/share/nginx/html
   develop:
     container_name: wetfoodshop_app
     image: wetfoodshop/develop
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
     volumes:
       - .:/code
     command:
-      ['watchify', './app/source/entry.js', '-o', './app/build/datalayer.js']
-    depends_on:
-      - nginx
+      ['npm', 'run', 'dev']
+    # depends_on:
+    #   - nginx
   install:
     container_name: wetfoodshop_install
     image: wetfoodshop/install
