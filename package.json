@@ -1,0 +1,38 @@
+{
+    "name": "wetfood_app",
+    "version": "1.0.0",
+    "description": "wetfood_test app",
+    "main": "",
+    "scripts": {
+    },
+    "repository": {
+    },
+    "author": "DA",
+    "license": "ISC",
+    "bugs": {
+    },
+    "homepage":"",
+    "devDependencies": {
+      "@babel/core": "^7.4.3",
+      "@babel/preset-env": "^7.4.3",
+      "browserify": "latest",
+      "eslint": "^5.16.0",
+      "eslint-config-airbnb-base": "^13.1.0",
+      "eslint-config-google": "^0.12.0",
+      "eslint-config-standard": "^12.0.0",
+      "eslint-plugin-import": "^2.17.1",
+      "eslint-plugin-node": "^8.0.1",
+      "eslint-plugin-promise": "^4.1.1",
+      "eslint-plugin-standard": "^4.0.0",
+      "gulp": "^4.0.0",
+      "gulp-babel": "^8.0.0",
+      "gulp-rename": "^1.4.0",
+      "gulp-uglify": "^3.0.2",
+      "gulp-watch": "^5.0.1",
+      "jasmine": "^3.4.0",
+      "uglify-js": "^3.5.4",
+      "watchify": "^3.11.1"
+    },
+    "dependencies": {}
+  }
+  
