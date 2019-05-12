@@ -8,20 +8,32 @@ services:
   #     - "8002:80"
   #   volumes:
   #     - ./app/build/:/usr/share/nginx/html
-  develop:
-    container_name: wetfoodshop_app
-    image: wetfoodshop/develop
+  develop_client:
+    container_name: wetfoodshop_client
+    image: wetfoodshop/develop_client
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.client
     ports:
-      - "5000:5000"
+      - "8080:8080"
     volumes:
       - .:/code
     command:
-      ['npm', 'run', 'dev']
-    # depends_on:
-    #   - nginx
+      ['npm', 'start']
+  develop_server:
+    container_name: wetfoodshop_express
+    image: wetfoodshop/develop_server
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/code
+    depends_on:
+      - develop_client
+    command:
+      ['npm', 'start']
   install:
     container_name: wetfoodshop_install
     image: wetfoodshop/install
@@ -30,7 +42,7 @@ services:
       dockerfile: Dockerfile.install
     volumes:
       - .:/code
-    command:
-      ['npm', 'install']
+    entrypoint:
+      ['sh', 'install.sh']
 
 
