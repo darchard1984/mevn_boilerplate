@@ -1,3 +1,3 @@
-### Vue Test App
+### MEVN Boilerplate with Docker 
 
-This is repo contains a small test application built on Vue.js and Express.js as an exercise in learning these frameworks. 
+This is repo contains a small MEVN boilerplate built on Docker. 
