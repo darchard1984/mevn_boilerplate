@@ -9,8 +9,8 @@ services:
   #   volumes:
   #     - ./app/build/:/usr/share/nginx/html
   develop_client:
-    container_name: wetfoodshop_client
-    image: wetfoodshop/develop_client
+    container_name: develop_client
+    image: vue/develop_client
     build:
       context: .
       dockerfile: Dockerfile.client
@@ -21,8 +21,8 @@ services:
     command:
       ['npm', 'start']
   develop_server:
-    container_name: wetfoodshop_express
-    image: wetfoodshop/develop_server
+    container_name: develop_server
+    image: node_express/develop_server
     build:
       context: .
       dockerfile: Dockerfile.server
@@ -35,8 +35,8 @@ services:
     command:
       ['npm', 'start']
   install:
-    container_name: wetfoodshop_install
-    image: wetfoodshop/install
+    container_name: mevn_boilerplate_install
+    image: mevn_boilerplate/install
     build:
       context: .
       dockerfile: Dockerfile.install
