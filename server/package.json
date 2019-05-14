@@ -18,5 +18,8 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.19.0",
     "npm": "^6.9.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.4.0"
   }
 }
