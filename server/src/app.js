@@ -12,7 +12,7 @@ app.get('/posts', (req, res) => {
     res.send(
       [{
         title: "Hello World!",
-        description: "Hey there! How are you?"
+        description: "Your endpooint is working."
       }]
     );
 });

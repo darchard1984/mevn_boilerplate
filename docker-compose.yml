@@ -1,13 +1,5 @@
 version: '3'
 services:
-  # nginx:
-  #   container_name: wetfoodshop_nginx
-  #   image: wetfoodshop/nginx
-  #   build: ./nginx
-  #   ports:
-  #     - "8002:80"
-  #   volumes:
-  #     - ./app/build/:/usr/share/nginx/html
   develop_client:
     container_name: develop_client
     image: vue/develop_client

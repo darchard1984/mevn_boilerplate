@@ -24,7 +24,6 @@ cd ../server
 
 echo ''
 npm install 
-npm install express
 echo ''
 
 echo '########################################'

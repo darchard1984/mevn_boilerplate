@@ -1,8 +1,7 @@
 <template>
   <div class="posts">
     <h1>Posts</h1>
-    This file will list all the posts.
-
+    <p>Your posts will be rendered below.</p>
     <div v-bind:key="post.id" v-for="post in posts">
       <p>
         <span><b>{{ post.title }}</b></span><br />
